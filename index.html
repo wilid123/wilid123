@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Haven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #8B6B61, #5D4037);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .letter-spacing-wide {
+            letter-spacing: 0.3em;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 6rem 2rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .typewriter {
+            border-right: 3px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #8B6B61 }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-beige-100 bg-opacity-90 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif text-gray-800">TYPO</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
+                        <a href="#history" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">History</a>
+                        <a href="#styles" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">Styles</a>
+                        <a href="#gallery" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">Gallery</a>
+                        <a href="#contact" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section flex items-center justify-center bg-gradient-to-b from-beige-100 to-beige-200">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-serif mb-6 text-gray-800 fade-in">
+                <span class="text-gradient">Typography</span> <span class="block mt-4">Haven</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Where letters dance and words come alive in perfect harmony.
+            </p>
+            <div class="typewriter text-xl text-gray-700 font-mono mx-auto w-max">
+                The art of beautiful writing...
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="section bg-beige-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl md:text-5xl font-serif text-gray-800 mb-8">
+                        The <span class="italic">Timeless</span> Art of <span class=" decoration-wavy decoration-beige-400">Letters</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Typography has shaped human communication since the invention of movable type in the 15th century. From Gutenberg's press to digital fonts, each era has left its mark on how we see and interpret written language.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The Renaissance brought elegance, the Industrial Revolution introduced standardization, and the Digital Age gave us infinite possibilities. Today, typography stands at the intersection of art and technology.
+                    </p>
+                    <div class="mt-8">
+                        <span class="inline-block bg-beige-200 text-beige-800 px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2">Gutenberg</span>
+                        <span class="inline-block bg-beige-200 text-beige-800 px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2">Baskerville</span>
+                        <span class="inline-block bg-beige-200 text-beige-800 px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2">Bodoni</span>
+                        <span class="inline-block bg-beige-200 text-beige-800 px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2">Helvetica</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative">
+                    <div class="bg-beige-200 p-8 rounded-lg shadow-lg hover-scale">
+                        <div class="text-9xl font-serif text-center text-gray-700 mb-4">A</div>
+                        <p class="text-sm text-gray-500 text-center uppercase tracking-widest">The beginning of all typography</p>
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-beige-300 p-6 rounded-lg shadow-lg rotate-6 hover-scale">
+                        <div class="text-6xl font-mono text-center text-gray-700">Z</div>
+                        <p class="text-xs text-gray-500 text-center uppercase tracking-widest">The final letter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Styles Section -->
+    <section id="styles" class="section bg-beige-100 py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-serif text-center text-gray-800 mb-16">
+                <span class="border-b-4 border-beige-400 pb-2">Typography</span> Styles
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Serif -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 hover-scale">
+                    <div class="text-5xl font-serif text-gray-800 mb-4">Aa</div>
+                    <h3 class="text-2xl font-serif text-gray-800 mb-3">Serif</h3>
+                    <p class="text-gray-600 mb-4">Elegant and traditional, with small lines at the ends of characters.</p>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Best for:</div>
+                    <p class="text-gray-600 text-sm">Print, books, formal documents</p>
+                </div>
+                
+                <!-- Sans-serif -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 hover-scale">
+                    <div class="text-5xl font-sans font-bold text-gray-800 mb-4">Aa</div>
+                    <h3 class="text-2xl font-sans font-bold text-gray-800 mb-3">Sans-serif</h3>
+                    <p class="text-gray-600 mb-4">Clean and modern, without the small lines at character ends.</p>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Best for:</div>
+                    <p class="text-gray-600 text-sm">Web, UI, minimal designs</p>
+                </div>
+                
+                <!-- Display -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 hover-scale">
+                    <div class="text-5xl font-mono text-gray-800 mb-4">Aa</div>
+                    <h3 class="text-2xl font-mono text-gray-800 mb-3">Monospace</h3>
+                    <p class="text-gray-600 mb-4">All characters occupy the same horizontal space.</p>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Best for:</div>
+                    <p class="text-gray-600 text-sm">Code, technical documents</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 max-w-3xl mx-auto">
+                <h3 class="text-3xl font-serif text-center text-gray-800 mb-6">The Psychology of Type</h3>
+                <p class="text-gray-600 text-center leading-relaxed">
+                    Typography isn't just about readability—it's about feeling. Serif fonts convey tradition and reliability, sans-serif fonts suggest modernity and approachability, while script fonts evoke elegance and creativity. The right typographic choices can dramatically alter how your message is perceived.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section bg-beige-50 py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-serif text-center text-gray-800 mb-4">
+                Typographic <span class="italic">Gallery</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                A visual journey through the beauty of letterforms and their arrangement.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-8xl font-serif text-center text-gray-700 mb-4">Q</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">The Majesty of Q</p>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-8xl font-mono text-center text-gray-700 mb-4">&</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">Ampersand Art</p>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-8xl font-sans font-bold text-center text-gray-700 mb-4">W</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">Modern W</p>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-6xl font-serif italic text-center text-gray-700 mb-4">The quick brown fox</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">Classic Pangram</p>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-6xl font-mono text-center text-gray-700 mb-4">1234567890</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">Numerals</p>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <div class="text-6xl font-sans font-bold text-center text-gray-700 mb-4">HELLO WORLD</div>
+                    <p class="text-gray-500 text-center uppercase tracking-widest text-sm">Digital Greeting</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 max-w-4xl mx-auto bg-beige-200 p-8 rounded-lg">
+                <h3 class="text-3xl font-serif text-center text-gray-800 mb-6">Kerning & Tracking</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-2xl font-serif mb-2 text-gray-700 tracking-tight">AVATAR</p>
+                        <p class="text-sm text-gray-500 mb-4">Tight kerning (AV)</p>
+                        
+                        <p class="text-2xl font-serif mb-2 text-gray-700 tracking-normal">AVATAR</p>
+                        <p class="text-sm text-gray-500 mb-4">Normal kerning</p>
+                        
+                        <p class="text-2xl font-serif mb-2 text-gray-700 tracking-wide">AVATAR</p>
+                        <p class="text-sm text-gray-500">Wide kerning</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Kerning adjusts the space between specific letter pairs, while tracking adjusts spacing uniformly over a range of characters. Proper spacing is crucial for readability and aesthetic appeal. Well-kerned type appears evenly spaced without awkward gaps.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-beige-100 py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-serif text-center text-gray-800 mb-4">
+                Get in <span class="italic">Touch</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-xl mx-auto">
+                Interested in typography? Have questions about fonts? Want to discuss a project? We'd love to hear from you.
+            </p>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-beige-300 rounded-md focus:ring-beige-500 focus:border-beige-500" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-beige-300 rounded-md focus:ring-beige-500 focus:border-beige-500" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 border border-beige-300 rounded-md focus:ring-beige-500 focus:border-beige-500" placeholder="What's this about?">
+                    </div>
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-beige-300 rounded-md focus:ring-beige-500 focus:border-beige-500" placeholder="Your message..."></textarea>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="w-full bg-beige-600 text-white py-3 px-4 rounded-md hover:bg-beige-700 transition-colors duration-300 font-medium">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-serif text-gray-800 mb-6">Follow Our Typographic Journey</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-beige-700">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-beige-700">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-beige-700">
+                        <i class="fab fa-pinterest text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-beige-700">
+                        <i class="fab fa-behance text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-beige-800 text-beige-100 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif mb-4">TYPO</h3>
+                    <p class="text-beige-300">
+                        A celebration of typography and the art of letterforms. Founded in 2023 with a passion for beautiful type.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-beige-300 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#history" class="text-beige-300 hover:text-white transition-colors duration-300">History</a></li>
+                        <li><a href="#styles" class="text-beige-300 hover:text-white transition-colors duration-300">Styles</a></li>
+                        <li><a href="#gallery" class="text-beige-300 hover:text-white transition-colors duration-300">Gallery</a></li>
+                        <li><a href="#contact" class="text-beige-300 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Typography Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-beige-300 hover:text-white transition-colors duration-300">Font Pairing Guide</a></li>
+                        <li><a href="#" class="text-beige-300 hover:text-white transition-colors duration-300">Type Terminology</a></li>
+                        <li><a href="#" class="text-beige-300 hover:text-white transition-colors duration-300">Free Fonts</a></li>
+                        <li><a href="#" class="text-beige-300 hover:text-white transition-colors duration-300">Design Inspiration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-beige-700 mt-12 pt-8 text-center text-beige-400 text-sm">
+                <p>© 2023 Typography Haven. All rights reserved. All letters cherished.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
